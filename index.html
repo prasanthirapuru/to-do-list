@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-do List App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="board">
+    <!-- Left Part: Calendar -->
+    <div class="calendar-container">
+      <div class="header">Calendar</div>
+      <div class="month-nav">
+        <button id="prev-month">←</button>
+        <span id="month-year"></span>
+        <button id="next-month">→</button>
+      </div>
+      <div id="calendar" class="calendar"></div>
+    </div>
+
+    <!-- Right Part: Task List -->
+    <div class="task-list">
+      <div class="header">To-do List for <span id="selected-date">Select a Date</span></div>
+      <div class="date">Date: <span id="date-text">Select a Date</span></div>
+      <ul id="task-list">
+        <!-- Tasks will appear here -->
+      </ul>
+      <input type="text" id="new-task-input" placeholder="Add new task" />
+      <button id="add-task-btn">Add Task</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
