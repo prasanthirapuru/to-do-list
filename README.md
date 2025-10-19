@@ -1,4 +1,4 @@
-# 🧁 TO-DO LIST APP BY PRASHANTHI RAPURU
+# 🧁 TO-DO LIST APP BY PRASANTHI RAPURU
 
 Welcome to the **To-Do List App**! 🎉  
 This is a simple, elegant, and interactive application to manage your daily tasks efficiently.  
