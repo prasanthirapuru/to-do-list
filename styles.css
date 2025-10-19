@@ -221,3 +221,13 @@ body {
   color: #ff5c5c;
   transform: scale(1.1);
 }
+.footer {
+      text-align: center;
+      color: #dcbfff;
+      margin-top: 20px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.9rem;
+}
+
+    
+ 
