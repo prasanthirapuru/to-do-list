@@ -1,73 +1,50 @@
-/* ========== Global Styles ========== */
+/* ====== Global Layout ====== */
 body {
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(135deg, #0f0f10, #1c1c1f, #23242a);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #0b0c10, #1f1f29, #2a2d34);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  color: #eaeaea;
+  color: #e8e8e8;
+  backdrop-filter: blur(15px);
 }
 
-/* ========== Board Container ========== */
+/* ====== Main Board ====== */
 .board {
-  background: rgba(40, 40, 50, 0.5);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   display: flex;
   padding: 40px;
   width: 1000px;
   max-width: 95%;
   gap: 40px;
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ========== Common Headers ========== */
-.header {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: #dcbfff;
-  text-shadow: 0 0 8px rgba(220, 191, 255, 0.3);
-  margin-bottom: 15px;
-}
-
-/* ========== Calendar Section ========== */
+/* ====== Calendar & Task Sections ====== */
 .calendar-container, .task-list {
   flex: 1;
 }
 
-.month-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+/* ====== Header ====== */
+.header {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #b388ff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(179, 136, 255, 0.3);
 }
 
-.month-nav button {
-  padding: 6px 12px;
-  background-color: rgba(110, 80, 160, 0.5);
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+.header span {
+  color: #9f8aff;
+  font-style: italic;
 }
 
-.month-nav button:hover {
-  background-color: rgba(190, 150, 255, 0.6);
-  transform: scale(1.05);
-}
-
-#month-year {
-  font-size: 1.1rem;
-  color: #e0d6f6;
-}
-
-/* ========== Calendar Grid ========== */
+/* ====== Calendar ====== */
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -77,32 +54,33 @@ body {
 }
 
 .calendar div {
-  padding: 18px;
+  padding: 20px;
   text-align: center;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 10px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
 }
 
 .calendar div:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.05);
 }
 
 .calendar .selected {
   background: rgba(153, 102, 255, 0.4);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .calendar .completed {
-  background: rgba(90, 200, 100, 0.4);
-  color: #fff;
+  background: rgba(100, 255, 100, 0.25);
+  color: white;
 }
 
-/* ========== Task List ========== */
+/* ====== Task List ====== */
 .task-list {
   display: flex;
   flex-direction: column;
@@ -110,14 +88,16 @@ body {
 }
 
 .task-list .header {
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
-  color: #dcbfff;
+  color: #b388ff;
+  margin-bottom: 10px;
 }
 
 .task-list .date {
   font-size: 1.1rem;
-  color: #bbb;
-  margin-bottom: 15px;
+  color: #a7a7a7;
+  margin-bottom: 10px;
 }
 
 .task-list ul {
@@ -126,40 +106,42 @@ body {
   margin-bottom: 20px;
 }
 
-/* ========== Task Items ========== */
+/* ====== Task Items ====== */
 .task {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   padding: 12px 20px;
   border-radius: 12px;
-  margin-bottom: 12px;
-  border-left: 6px solid rgba(190, 150, 255, 0.5);
+  margin-bottom: 10px;
+  border-left: 6px solid rgba(179, 136, 255, 0.6);
+  font-size: 0.95rem;
   transition: all 0.3s ease;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 
 .task:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   transform: translateY(-2px);
 }
 
-/* ========== Checkbox ========== */
+/* ====== Checkbox ====== */
 .task input[type="checkbox"] {
   appearance: none;
   width: 20px;
   height: 20px;
   border: 2px solid #b388ff;
   border-radius: 5px;
-  margin-right: 12px;
+  margin-right: 15px;
   position: relative;
   cursor: pointer;
+  flex-shrink: 0;
   background: transparent;
 }
 
 .task input[type="checkbox"]:checked {
-  background: linear-gradient(135deg, #b388ff, #7b68ee);
+  background: linear-gradient(135deg, #b388ff, #8667f0);
   border-color: transparent;
 }
 
@@ -172,52 +154,79 @@ body {
   top: -1px;
 }
 
-/* ========== Buttons and Inputs ========== */
+/* ====== Buttons ====== */
 .task-list button {
   padding: 10px 20px;
-  background: rgba(153, 102, 255, 0.4);
+  background: rgba(153, 102, 255, 0.3);
   border: none;
   color: white;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
 }
 
 .task-list button:hover {
-  background: rgba(180, 140, 255, 0.6);
+  background: rgba(153, 102, 255, 0.5);
   transform: scale(1.05);
 }
 
+/* ====== Input Field ====== */
 .task-list input[type="text"] {
   padding: 10px;
   font-size: 1rem;
+  margin-right: 10px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  color: #eaeaea;
   outline: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .task-list input[type="text"]:focus {
-  border: 1px solid rgba(190, 150, 255, 0.5);
+  border: 1px solid rgba(179, 136, 255, 0.6);
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* ========== Delete Button ========== */
+/* ====== Month Navigation ====== */
+.month-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.month-nav button {
+  padding: 6px 12px;
+  background: rgba(179, 136, 255, 0.3);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.month-nav button:hover {
+  background: rgba(179, 136, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* ====== Delete Button ====== */
 .delete-btn {
   cursor: pointer;
   background: transparent;
   border: none;
   font-size: 1.2rem;
   color: #b388ff;
+  flex-shrink: 0;
   margin-left: 10px;
   transition: 0.3s;
 }
 
 .delete-btn:hover {
   color: #ff5c5c;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
