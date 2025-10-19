@@ -235,3 +235,26 @@ body::after {
   transform: scale(1.1);
 }
 
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05); /* glass effect */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.3s;
+}
+
+.footer:hover {
+  background: rgba(155, 93, 229, 0.2);
+  color: #fff;
+}
+
+
