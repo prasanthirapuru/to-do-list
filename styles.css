@@ -222,16 +222,17 @@ body {
   color: #ff5c5c;
   transform: scale(1.1);
 }
-.footer {
-  width: 100%;
-  text-align: center;
-  color: #dcbfff;
-  margin-top: 30px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.9rem;
+.footer { 
+  width: 100%; 
+  text-align: center; 
+  color: #dcbfff; 
+  margin-top: 30px; 
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 0.9rem; 
   position: fixed; 
-  background: rgba(40, 40, 50, 0.5); 
-  padding: 10px 0;
+  bottom: 0; left: 0; 
+  background: rgba(40, 40, 50, 0.5); /* matches your board theme */ 
+  padding: 10px 0; 
 }
 
 
