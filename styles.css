@@ -229,8 +229,8 @@ body {
   margin-top: 30px;
   font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
-  position: relative; /* changed from fixed to relative */
-  background: rgba(40, 40, 50, 0.5); /* matches your board theme */
+  position: fixed; 
+  background: rgba(40, 40, 50, 0.5); 
   padding: 10px 0;
 }
 
